@@ -50,8 +50,7 @@ diff -r fc9dd79fe91a xen/arch/x86/hpet.c
  
      if ( index != RTC_REG_B )
          return;
--    
-+
+ 
 +    /*
 +     * ORC - Wake on RTC alarm does not conflict with hpet.
 +     * The HW will wake up the CPU when the RTC alarm kicks off
@@ -71,8 +70,8 @@ diff -r fc9dd79fe91a xen/arch/x86/hpet.c
      }
 +#else
 +    if ( value & (RTC_PIE | RTC_UIE ) )
-+	    printk("WARNING: dom0 attempting to use RTC interrupts!\n");
++        printk("WARNING: dom0 attempting to use RTC interrupts!\n");
 +#endif
  }
  
- void hpet_broadcast_init(void)
+ void __init hpet_broadcast_init(void)
