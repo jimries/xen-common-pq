@@ -162,7 +162,7 @@ index caf7d17..7da1a86 100644
 --- a/xen/xsm/flask/policy/access_vectors
 +++ b/xen/xsm/flask/policy/access_vectors
 @@ -196,6 +196,8 @@ class domain2
-     setclaim
+     cacheflush
  # XEN_DOMCTL_setcorespersocket
      setcorespersocket
 +# XEN_DOMCTL_setbiosuuid
