@@ -112,9 +112,9 @@ index 4c5b2bb..9e26cee 100644
  #define XEN_DOMCTL_getnodeaffinity               69
 +#define XEN_DOMCTL_setbiosuuid                   90
 +
+ #define XEN_DOMCTL_set_max_evtchn                70
+ #define XEN_DOMCTL_cacheflush                    71
  #define XEN_DOMCTL_gdbsx_guestmemio            1000
- #define XEN_DOMCTL_gdbsx_pausevcpu             1001
- #define XEN_DOMCTL_gdbsx_unpausevcpu           1002
 diff --git a/xen/include/public/version.h b/xen/include/public/version.h
 index 44f26b0..cce6eb6 100644
 --- a/xen/include/public/version.h
