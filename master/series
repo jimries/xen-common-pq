@@ -15,7 +15,7 @@ blktap-resume-fix					# Bug Fix: Open full virtual disk path upon resume
 blktap-retry-fix					# Bug Fix: Fix retry count (see NXT-6106)
 rmrr-validate-range					# Bug Fix: Fix boot on HP6730b with a buggy RMRR ACPI table
 xentrace-format-handle-zero-tsc				# Bug fix: use last tsc if none provided
-iobitmap-on-all-vcpus					# Bug Fix: Fix SMP issue, where the ioport mask was not propagated to all VCPUS 
+#iobitmap-on-all-vcpus					# Bug Fix: Fix SMP issue, where the ioport mask was not propagated to all VCPUS 
 blktap-quieten-udevd					# Bug Fix: Eliminate udevd kernel warnings
 fix-write-clash						# Bug Fix: Fix define clash with linux 2.6.38 include files <- Needed?
 fix-32bit-xsm-interface                                 # Bug Fix: libxc flask interface is broken if 32bit dom0 runs on top of 64bit xen
