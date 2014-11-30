@@ -422,15 +422,6 @@ index 06a0d0a..d855fa2 100644
  static long memory_exchange(XEN_GUEST_HANDLE_PARAM(xen_memory_exchange_t) arg)
  {
      struct xen_memory_exchange exch;
-#@@ -547,7 +703,7 @@ long do_memory_op(unsigned long cmd, XEN_GUEST_HANDLE_PARAM(void) arg)
-#     struct domain *d;
-#     long rc;
-#     unsigned int address_bits;
-#-    unsigned long start_extent;
-#+    unsigned long start_extent, progress;
-#     struct xen_memory_reservation reservation;
-#     struct memop_args args;
-#     domid_t domid;
 @@ -737,6 +893,27 @@ long do_memory_op(unsigned long cmd, XEN_GUEST_HANDLE_PARAM(void) arg)
  
          break;
