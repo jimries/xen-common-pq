@@ -143,7 +143,7 @@ xc-xt-xen-translate
 xc-xt-local-pxe-rom
 xc-xt-v4v
 xc-xt-v4v-viptables
-xc-xt-unmap-shared-info
+#xc-xt-unmap-shared-info
 xc-xt-foreign-batch-cacheattr
 xc-xt-ioreq-multiple
 xc-xt-allow-pat-cacheattrs-for-all-domains
