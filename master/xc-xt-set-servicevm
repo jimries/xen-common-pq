@@ -162,7 +162,7 @@ index 60256d0..565ee1c 100644
 --- a/xen/xsm/flask/policy/access_vectors
 +++ b/xen/xsm/flask/policy/access_vectors
 @@ -196,6 +196,8 @@ class domain2
-     setclaim
+     setcorespersocket
  # XEN_DOMCTL_setbiosuuid
      setbiosuuid
 +# XEN_DOMCTL_set_xcisrv
