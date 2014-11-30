@@ -208,9 +208,9 @@ index 3d2c737..77b3b50 100644
 --- a/xen/xsm/flask/policy/access_vectors
 +++ b/xen/xsm/flask/policy/access_vectors
 @@ -200,6 +200,8 @@ class domain2
-     setcorespersocket
- # XEN_DOMCTL_setbiosuuid
      setbiosuuid
+ # XEN_DOMCTL_set_xcisrv
+     set_xcisrv
 +# XEN_DOMCTL_aperture_map
 +    aperture_map
  }
