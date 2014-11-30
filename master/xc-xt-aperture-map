@@ -208,9 +208,9 @@ index 3d2c737..77b3b50 100644
 --- a/xen/xsm/flask/policy/access_vectors
 +++ b/xen/xsm/flask/policy/access_vectors
 @@ -200,6 +200,8 @@ class domain2
-     setbiosuuid
- # XEN_DOMCTL_set_xcisrv
-     set_xcisrv
+     iommu_x_mapping
+ # XEN_DOMCTL_iommu_map_batch
+     iommu_map_batch
 +# XEN_DOMCTL_aperture_map
 +    aperture_map
  }
