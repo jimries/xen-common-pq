@@ -19,7 +19,7 @@ iobitmap-on-all-vcpus					# Bug Fix: Fix SMP issue, where the ioport mask was no
 blktap-quieten-udevd					# Bug Fix: Eliminate udevd kernel warnings
 fix-write-clash						# Bug Fix: Fix define clash with linux 2.6.38 include files <- Needed?
 fix-32bit-xsm-interface                                 # Bug Fix: libxc flask interface is broken if 32bit dom0 runs on top of 64bit xen
-fix-pci-serial-hang                                     # Bug Fix: Xen hangs early during dom0 boot when dom0 is doing pci initialization
+#fix-pci-serial-hang                                     # Bug Fix: Xen hangs early during dom0 boot when dom0 is doing pci initialization
 xsm-add-corespersocket                                  # Buf Fix: corespersocket domctl is missing a policy check on xsm enabled builds, always failing
 
 ##
@@ -28,7 +28,7 @@ xsm-add-corespersocket                                  # Buf Fix: corespersocke
 # debug-build-enable					# Debug  : Enable to get ASSERTS, and stack info for upstream
 # kdb							# Debug  : Hypervisor debugger - enable when necessary
 incremental-dmesg-processing				# Debug  : Change console output style
-add-percentages-to-xenpm				# Debug  : Patch name is self explanatory
+#add-percentages-to-xenpm				# Debug  : Patch name is self explanatory
 stack_on_triple_fault					# Debug  : patch name is self explanatory
 hvmloader_print_e820					# Debug  : print e820 memory info at startup
 tapdisk_debug						# Debug  : print error to syslog if write failed.
@@ -51,8 +51,8 @@ hotplug-scripts-iptables				# Config : Disable iptable handling in hotplug scrip
 hvm-pm-s-states						# ACPI   : Suppress ACPI S3/S4 in guests
 hvm-pm-hibernate-s-state                                # ACPI   : Redefine hibernate encoding to differ from shutdown
 acpi-pm							# ACPI   : AC adapter state in guest
-prune-acpi-devices					# ACPI   : remote unwanted ACPI devices
-prune-vga-acpi-dev                                      # ACPI   : remove unwated vga device (interferes with passthrough gpu s3)
+#prune-acpi-devices					# ACPI   : remote unwanted ACPI devices
+res with passthrough gpu s3)
 battery-units						# ACPI   : Change default reporting of battery units
 two-battery-support					# ACPI   : Support multiple batteries
 xen-libhvm						# SMBIOS : Add Ross' helper library for new SMBIOS
@@ -79,7 +79,7 @@ vgabios-ddc						# Video  : VGA BIOS DDC support
 ## Blktap2 / libvhd functionality
 ##
 blktap2-vci						# VHD    : Add dynamic batmap functionality to blktap2/libvhd
-blktap2-multi-coalesce					# VHD    : Coalesce a disk chain
+#blktap2-multi-coalesce					# VHD    : Coalesce a disk chain
 libvhd-disable-static-batmaps				# VHD    : disable all use of static batmaps
 vhd-validate-size					# VHD    : Validate VHD sizes
 vhd-util-allow-resize					# VHD    : Don't check the creator for resize
