@@ -11,7 +11,7 @@ index 831c56d..fa9ce04 100644
 -     (rangeset_is_empty((d)->iomem_caps) &&                     \
 -      rangeset_is_empty((d)->arch.ioport_caps) &&               \
 -      !has_arch_pdevs(d) &&                                     \
--      !is_hvm_domain(d)) ?                                      \
+-      is_pv_domain(d)) ?                                        \
 -     L1_DISALLOW_MASK : (L1_DISALLOW_MASK & ~PAGE_CACHE_ATTRS))
 +#define l1_disallow_mask(d) (L1_DISALLOW_MASK & ~PAGE_CACHE_ATTRS)
  
