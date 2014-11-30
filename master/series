@@ -145,7 +145,7 @@ xc-xt-v4v
 xc-xt-v4v-viptables
 #xc-xt-unmap-shared-info
 xc-xt-foreign-batch-cacheattr
-xc-xt-ioreq-multiple
+#xc-xt-ioreq-multiple
 xc-xt-allow-pat-cacheattrs-for-all-domains
 xc-xt-opt-disable-vmcs-shadowing
 xc-xt-xenstore-use-pthread-always
