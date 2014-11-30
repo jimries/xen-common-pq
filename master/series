@@ -81,7 +81,7 @@ vgabios-ddc						    # Video  : VGA BIOS DDC support
 blktap2-vci						    # VHD    : Add dynamic batmap functionality to blktap2/libvhd
 #blktap2-multi-coalesce				# VHD    : Coalesce a disk chain
 libvhd-disable-static-batmaps		# VHD    : disable all use of static batmaps
-vhd-validate-size					# VHD    : Validate VHD sizes
+#vhd-validate-size					# VHD    : Validate VHD sizes
 vhd-util-allow-resize				# VHD    : Don't check the creator for resize
 tapdisk-increase-vhd-req-pool		# VHD    : Size VHD request pool correctly (NXT-8058)
 
