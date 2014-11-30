@@ -4,30 +4,33 @@ index 9e5cbc0..86c3b96 100644
 +++ b/tools/firmware/Makefile
 @@ -7,7 +7,7 @@ INST_DIR := $(DESTDIR)$(XENFIRMWAREDIR)
  
- SUBDIRS-y :=
- SUBDIRS-$(CONFIG_OVMF) += ovmf
+ endif
+ ifeq ($(SEABIOS_PATH),)
 -SUBDIRS-$(CONFIG_SEABIOS) += seabios-dir
 +#SUBDIRS-$(CONFIG_SEABIOS) += seabios-dir
+ endif
  SUBDIRS-$(CONFIG_ROMBIOS) += rombios
  SUBDIRS-$(CONFIG_ROMBIOS) += vgabios
- #SUBDIRS-$(CONFIG_ROMBIOS) += etherboot
 diff --git a/tools/firmware/hvmloader/Makefile b/tools/firmware/hvmloader/Makefile
 index f8e1bd7..0a710c9 100644
 --- a/tools/firmware/hvmloader/Makefile
 +++ b/tools/firmware/hvmloader/Makefile
-@@ -73,9 +73,11 @@ ROMS += $(ROMBIOS_ROM) $(STDVGA_ROM) $(CIRRUSVGA_ROM) $(ETHERBOOT_ROMS)
+@@ -72,12 +72,10 @@
  endif
  
  ifeq ($(CONFIG_SEABIOS),y)
 -OBJS += seabios.o
 +OBJS += seabios.o optionroms.o
  CFLAGS += -DENABLE_SEABIOS
+-ifeq ($(SEABIOS_PATH),)
+-	SEABIOS_ROM := $(SEABIOS_DIR)/out/bios.bin
+-else
+-	SEABIOS_ROM := $(SEABIOS_PATH)
 +ifeq ($(SEABIOS_ROM),)
- SEABIOS_ROM := $(SEABIOS_DIR)/out/bios.bin
-+endif
++SEABIOS_ROM := $(SEABIOS_DIR)/out/bios.bin
+ endif
  ROMS += $(SEABIOS_ROM)
- else
- OBJS += seabios.o
+ endif
 diff --git a/tools/firmware/hvmloader/mkhex b/tools/firmware/hvmloader/mkhex
 index cb21257..d62d11d 100755
 --- a/tools/firmware/hvmloader/mkhex
