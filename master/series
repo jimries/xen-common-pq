@@ -42,7 +42,7 @@ local-ipxe						# Config : Pull ipxe from a local mirror
 10ms_timeslice						# Config : Change timeslice to 10ms
 #qemu-config						# Config : Build qemu with our options - patch won't apply when using upstream source tarball
 publish_xentrace_formats				# Config : Install xentrace on 'make install' FIXME
-add-command-line-option-to-disable-arat			# Config : patch name is self explanatory
+#add-command-line-option-to-disable-arat			# Config : patch name is self explanatory
 hotplug-scripts-iptables				# Config : Disable iptable handling in hotplug scripts
 
 ##
