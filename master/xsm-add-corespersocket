@@ -16,10 +16,10 @@ diff --git a/xen/xsm/flask/policy/access_vectors b/xen/xsm/flask/policy/access_v
 index 5dfe13b..caf7d17 100644
 --- a/xen/xsm/flask/policy/access_vectors
 +++ b/xen/xsm/flask/policy/access_vectors
-@@ -194,6 +194,8 @@ class domain2
-     setscheduler
- # XENMEM_claim_pages
-     setclaim
+@@ -198,6 +198,8 @@ class domain2
+     set_max_evtchn
+ # XEN_DOMCTL_cacheflush
+     cacheflush
 +# XEN_DOMCTL_setcorespersocket
 +    setcorespersocket
  }
