@@ -13,7 +13,7 @@ index 79d8402..d479bc8 100644
  /* conring_size: allows a large console ring than default (16kB). */
  static uint32_t __initdata opt_conring_size;
  size_param("conring_size", opt_conring_size);
-@@ -476,9 +480,31 @@ static void printk_start_of_line(void)
+@@ -476,9 +480,31 @@ static void printk_start_of_line(const char *prefix)
  {
      struct tm tm;
      char tstr[32];
@@ -21,7 +21,7 @@ index 79d8402..d479bc8 100644
 +    static unsigned long long prev; /* ns */
 +    unsigned long long delta; /* ns */
  
-     __putstr("(XEN) ");
+     __putstr(prefix);
  
 +    if ( opt_console_us_timestamps )
 +    {
